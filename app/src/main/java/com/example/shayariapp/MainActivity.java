@@ -1,24 +1,21 @@
 package com.example.shayariapp;
 
-import androidx.appcompat.app.AlertDialog;
+import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.DialogInterface;
-import android.graphics.ColorSpace;
-import android.os.Bundle;
-import android.widget.Toast;
-
-import com.example.shayariapp.Application.Adapter;
-import com.example.shayariapp.Application.MainModel;
+import com.example.shayariapp.Application.Adapters;
+import com.example.shayariapp.Application.Models;
 
 import java.util.ArrayList;
+
 
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-
 
 
     @Override
@@ -29,22 +26,31 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        recyclerView.setLayoutManager(new GridLayoutManager(this,2));
 
-        ArrayList<MainModel> arrayList = new ArrayList<>();
-        arrayList.add(new MainModel("Comedy Shayari","30",R.drawable.boy1));
-        arrayList.add(new MainModel("Desh Bhakti Shayarii","13",R.drawable.copy));
-        arrayList.add(new MainModel("Girls Shayari","11",R.drawable.girl2));
-        arrayList.add(new MainModel("Friendship Shayari","12",R.drawable.boy4));
-        arrayList.add(new MainModel("Love Sharayi","13",R.drawable.copy));
-        arrayList.add(new MainModel("Sorry Shayari","15",R.drawable.girl4));
-        arrayList.add(new MainModel("Bevafa Shayari","14",R.drawable.share));
-        arrayList.add(new MainModel("Pati Patni","13",R.drawable.copy));
-        arrayList.add(new MainModel("Shas Bahu","12",R.drawable.whatsapp));
-        arrayList.add(new MainModel("Status","11",R.drawable.share));
-        arrayList.add(new MainModel("Teacher","11",R.drawable.share));
+        ArrayList<Models> arrayList = new ArrayList<>();
+       // 1
+        arrayList.add(new Models(R.drawable.friend_singles,"Friends Shayari",R.drawable.friend_singles));
 
-        recyclerView.setAdapter(new Adapter(getApplicationContext(),arrayList));
+        // 2
+        arrayList.add(new Models(R.drawable.friendsingle,"Child Shayari",R.drawable.friendsingle));
+
+        arrayList.add(new Models(R.drawable.make_main,"Make Up Shayari",R.drawable.make_main));
+
+        arrayList.add(new Models(R.drawable.budde_main,"Budde Budiya Shayari",R.drawable.budde_main));
+
+        arrayList.add(new Models(R.drawable.teacher_main,"Teachers Shayari",R.drawable.teacher_main));
+
+        arrayList.add(new Models(R.drawable.hus_wife_main,"Pati Patni Shayari",R.drawable.hus_wife_main));
+
+        arrayList.add(new Models(R.drawable.mom_main,"Mom Shayari",R.drawable.mom_main));
+        arrayList.add(new Models(R.drawable.atti_main,"Attitude Shayari",R.drawable.atti_main));
+
+        arrayList.add(new Models(R.drawable.birthday_main,"BirthDay Shayari",R.drawable.birthday_main));
+        arrayList.add(new Models(R.drawable.des_man,"DeshBhakti Shayari",R.drawable.des_man));
+
+
+        recyclerView.setAdapter(new Adapters(getApplicationContext(), arrayList));
     }
- 
+
 }

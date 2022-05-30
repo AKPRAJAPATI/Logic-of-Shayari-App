@@ -10,18 +10,39 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ShayariApp">
         <activity
-            android:name=".Activity.GhamndiActivity"
+            android:name=".Classes.FriendActivity"
             android:exported="false" />
-      <activity android:name=".Activity.desh_bhakti" android:exported="false"/>
-      <activity android:name=".Activity.best_friends" android:exported="false"/>
-      <activity android:name=".Activity.bhai_bahan" android:exported="false"/>
-      <activity android:name=".Activity.budde_budiya" android:exported="false"/>
-      <activity android:name=".Activity.girls" android:exported="false"/>
-      <activity android:name=".Activity.jokes" android:exported="false"/>
-      <activity android:name=".Activity.sas_bahu" android:exported="false"/>
-      <activity android:name=".Activity.teacher" android:exported="false"/>
-      <activity android:name=".Activity.pati_patni" android:exported="false"/>
-      <activity android:name=".Activity.comedy_sharyi" android:exported="false"/>
+        <activity
+            android:name=".Classes.childActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Classes.makeUpActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Classes.buddeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Classes.teacherActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Classes.pati_patniActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Classes.momActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".Classes.attitudeActivity"
+            android:exported="false" />
+
+  <activity
+            android:name=".Classes.birthDayActivity"
+            android:exported="false" />
+<activity
+            android:name=".Classes.deshBhaktiActivity"
+            android:exported="false" />
 
 
         <activity
@@ -36,6 +57,7 @@
         <activity
             android:name=".MainActivity"
             android:exported="true" />
+
     </application>
 
 </manifest>
